@@ -1,0 +1,111 @@
+<!--
+ * @Description: 
+ * @Author:  chessyu 
+ * @Date: 2021-07-21 13:41:19
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧大屏</title>
+    <link href="./assets/style/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/index.css">
+    
+    <script src="./assets/plugins/jquery/jquery-3.4.1.js"></script>
+    <script src="./assets/plugins/echarts/echarts.js"></script>
+    <script src="./assets/js/mock.js"></script>
+</head>
+<body style="background-color: #030d32;">
+    <div class="w-full min-h-screen base-bgk-img flex flex-col">
+        <div class="w-full px-4 h-20 relative ">
+            <span class="text-white text-lg absolute top-2 right-1/2 comst-translate-x-50 font-semibold">科技中心项目大屏</span>
+            <span class="text-white text-sm absolute right-8 top-8"> 
+                <i class="text-2xl not-italic mr-2" id="times"></i>
+                <i class="not-italic" id="dates"></i>
+                <i class="not-italic" id="weeks"></i>
+                
+            </span>
+        </div>
+        <div class="w-full flex px-4 py-2 space-x-5 flex-1 ">
+            <div class="w-1/4 max-h-full comst-shadow-inner overflow-hidden px-4">
+               <div class="h-1/3 flex flex-col ">
+                    <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目总数</p>
+                    <div class=" flex-1" id="projectToal"></div>
+                </div>
+                <div class="h-1/3 flex flex-col ">
+                    <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目类型</p>
+                    <div class=" flex-1" id="projectType"></div>
+                </div>
+                <div class="h-1/3 flex flex-col ">
+                    <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目风险分析</p>
+                    <div class="flex-1 flex flex-col">
+                        <p class="flex text-white text-sm relative ml-2 my-2 comst-tip-group">
+                            <span class=" z-10 px-1  ">近两月风险汇总</span>
+                            <span class="flex-1 font-light comst-tip-group-right relative "></span>
+                        </p> 
+                        <div class="flex-1 ">
+                            <table class="border-collapse text-white text-center text-xs block w-full max-h-full  comst-table">
+                                <thead class="flex flex-col ">
+                                    <tr class="flex comst-bg-gradient h-6 leading-6">
+                                        <td class="w-8">次数</td>
+                                        <td  class="w-14">项目名称</td>
+                                        <td class="flex-1">潜在风险</td>
+                                        <td class="w-18">部门及填报人</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="flex flex-col">
+                                    <tr class="flex pt-2">
+                                        <td class="w-8">1</td>
+                                        <td class="w-14">手游小程序</td>
+                                        <td  class="flex-1">对接其它渠道时，参数定义有问题。</td>
+                                        <td class="w-18">平台部 + 张大仙</td>
+                                    </tr>
+                                    <tr class="flex pt-2">
+                                        <td class="w-8">2</td>
+                                        <td class="w-14">微聊APP</td>
+                                        <td  class="flex-1">完成数据接口，等待后台提供。</td>
+                                        <td class="w-18">架构组 + 李二贵</td>
+                                    </tr>
+                                    <tr class="flex pt-2">
+                                        <td class="w-8">1</td>
+                                        <td class="w-14">企业官网</td>
+                                        <td  class="flex-1">界页面正在开发。</td>
+                                        <td class="w-18">平台部 + 王小麻</td>
+                                    </tr>
+                                    <tr class="flex pt-2">
+                                        <td class="w-8">1</td>
+                                        <td class="w-14">轻应用</td>
+                                        <td  class="flex-1">开发组织架构</td>
+                                        <td class="w-18">平台部 + 赵小林</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div >
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 max-h-full overflow-hidden flex flex-col">
+                <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目故障分析</p>
+                <div class="flex-1" id="projectMap"></div>
+            </div>
+            <div class="w-1/4 max-h-full overflow-hidden comst-shadow-inner ">
+                <div class="h-2/3 flex flex-col">
+                    <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目日志分析</p>
+                    <div class=" flex-1" id="projectlog"></div>
+                    <div class=" flex-1" id="projectlogs"></div>
+                </div>
+                <div class="h-1/3  flex flex-col ">
+                    <p class="text-white text-lg text-center font-bold comst-bg-gradient">项目故障分析</p>
+                    <div class="flex-1" id="projectPop"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
+
